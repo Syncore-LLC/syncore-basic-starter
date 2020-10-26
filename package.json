@@ -1,0 +1,24 @@
+{
+  "name": "syncore-basic-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^10.0.1",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.9.6"
+  },
+  "scripts": {
+    "build": "yarn tailwindcss build ./css/tailwind.css -o ./css/build.css"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write"
+    }
+  }
+}
