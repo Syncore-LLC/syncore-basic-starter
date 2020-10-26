@@ -1,4 +1,4 @@
-![https://img.syn-core.com/syncoreLogo@2x.png](Syncore Logo)
+![Syncore Logo](https://img.syn-core.com/syncoreLogo.svg)
 
 ### syncore-basic-starter
 
