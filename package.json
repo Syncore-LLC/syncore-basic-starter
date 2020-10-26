@@ -5,20 +5,29 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^10.0.1",
-    "cssnano": "^4.1.10",
+    "postcss": "^8.1.4",
     "postcss-cli": "^8.1.0",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.9.6"
   },
   "scripts": {
-    "build": "yarn tailwindcss build ./css/tailwind.css -o ./css/build.css"
+    "build": "cross-env NODE_ENV=production postcss ./css/tailwind.css -o ./css/build.css",
+    "dev": "tailwindcss build ./css/tailwind.css -o ./css/build.css && live-server",
+    "tw": "tailwindcss build ./css/tailwind.css -o ./css/build.css"
   },
   "devDependencies": {
-    "husky": "^4.3.0"
+    "cross-env": "^7.0.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "live-server": "^1.2.1",
+    "prettier": "^2.1.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
