@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "CommonJS",
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@utils": ["src/components/utils"],
+      "@component/*": ["src/components/*"],
+      "@global/*": ["src/components/globals/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@svg/*": ["src/assets/svg/*"],
+      "@helper/*": ["src/utils/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}

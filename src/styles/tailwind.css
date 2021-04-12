@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* @Typography */
+  .h1 {
+    @apply text-6xl;
+  }
+
+  .h2 {
+    @apply text-5xl;
+  }
+
+  .h3 {
+    @apply text-3xl;
+  }
+
+  .h4 {
+    @apply text-2xl;
+  }
+
+  .h5 {
+    @apply text-xl;
+  }
+
+  .h6 {
+    @apply text-lg;
+  }
+
+  .p {
+    @apply text-base;
+  }
+  /* Base extensions */
+}
+
+@layer components {
+  /* @Buttons */
+  .primary {
+    @apply flex items-center justify-center w-full max-w-sm p-5 text-white bg-blue-500 rounded-lg;
+  }
+
+  .secondary {
+    @apply flex items-center justify-center w-full max-w-sm p-5 text-white bg-gray-800 rounded-lg;
+  }
+
+  /* Component extensions */
+}
